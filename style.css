@@ -1,1 +1,93 @@
 /* Add you CSS here */
+
+/* Set a background color and font for the whole page */
+body {
+  background-color: #FFF9E5; /* soft cream background */
+  font-family: Arial, sans-serif; /* simple font */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for each section */
+section {
+  background-color: #fff; /* white background for sections */
+  margin: 20px auto; /* space around sections */
+  padding: 20px; /* space inside sections */
+  max-width: 600px; /* limit section width */
+  border-radius: 8px; /* rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+/* Hero section: make it stand out */
+.hero {
+  text-align: center; /* center text */
+  background-color: #e0f7fa; /* light blue background */
+}
+
+/* Section headings */
+h2 {
+  
+  text-align: center;
+  color: #333; /* dark gray color */
+}
+
+/* Skills list */
+.skills ul {
+  list-style-type: disc; /* bullet points */
+  padding-left: 20px; /* indent list */
+}
+
+/* Contact info */
+.contact-info p {
+  margin: 8px 0;
+}
+
+/* Center the contact logos under Contact Info */
+.contact-logos {
+  text-align: center; /* center the logos horizontally */
+  margin-top: 12px;   /* add a little space above */
+}
+
+/* Bounce/zoom effect for contact logos */
+.contact-logos img:hover {
+  transform: scale(1.15); /* slightly larger on hover */
+  transition: transform 0.2s ease;
+}
+
+/* Skills section: display skills in a row and center them */
+.skills-row {
+  display: flex; /* put items in a row */
+  justify-content: center; /* center the row */
+  gap: 32px; /* space between each skill */
+  margin-top: 16px;
+}
+
+/* Each skill item: center content */
+.skill-item {
+  display: flex;
+  flex-direction: column; /* stack image and text vertically */
+  align-items: center; /* center horizontally */
+  font-size: 20px; /* increased from 16px */
+}
+
+/* Make skill logos greyed out and a bit larger */
+.skill-logo {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  width: 65px;   /* increased from 28px */
+  height: 65px;  /* increased from 28px */
+  margin-bottom: 16px; /* increased space between image and text */
+  /* Add a smooth transition for the hover effect */
+  transition: transform 0.2s ease;
+}
+
+/* When you hover over a skill item (logo or name), both zoom/bounce */
+.skill-item:hover .skill-logo,
+.skill-item:hover div {
+  transform: scale(1.15); /* slightly larger on hover */
+  transition: transform 0.2s ease;
+}
+.skill-item div:hover {
+  transform: scale(1.15); /* slightly larger on hover */
+  transition: transform 0.2s ease;
+}
