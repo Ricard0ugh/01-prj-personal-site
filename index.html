@@ -4,21 +4,33 @@
   <meta charset="UTF-8">
   <title>Ricardo's Personal Site!</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Add Google Fonts for a fun heading font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Simple navigation bar -->
+  <nav class="navbar">
+    <a href="#hero">Home</a>
+    <a href="#about-me">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact-info">Contact</a>
+  </nav>
+
   <!-- Hero section: Main introduction -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <!-- Banner image -->
     <!-- This image is the banner at the top of the page -->
     <img src="img/togepi.png" alt="Togepi Banner" style="width: 100px; height: auto;">
     <!-- Main heading -->
     <h1>Welcome to Ricardo's Portfolio</h1>
     <!-- Short introduction -->
-    <p>Hello! I'm Ricardo, a web development student.</p>
+    <p>Howdy! Feel free to explore around!</p>
+    <!-- Fun quote for personality -->
+    <p class="quote">"Keep learning, keep growing!"</p>
   </section>
 
   <!-- About Me section -->
-  <section class="about-me">
+  <section class="about-me" id="about-me">
     <h2>About Me</h2>
     <p>
       Hello! I'm an aspiring software engineer and ASU Computer Science student focused on front-end development. Building skills in C++, JavaScript, and HTML through the ASU Global Career Accelerator program. Seeking opportunities to apply my skills through internships, projects, and collaborations.
@@ -26,7 +38,7 @@
   </section>
 
   <!-- Skills section -->
-  <section class="skills">
+  <section class="skills" id="skills">
     <h2>Skills</h2>
     <!-- Skills displayed in a row, each with logo above the name -->
     <div class="skills-row">
@@ -50,13 +62,13 @@
   </section>
 
   <!-- Contact Info section -->
-  <section class="contact-info">
+  <section class="contact-info" id="contact-info">
     <h2>Contact</h2>
     <p>Open to all messages, let's collaborate!</p>
     <!-- Social links with logos, now wrapped for centering -->
     <div class="contact-logos">
       <a href="https://www.linkedin.com/in/ricardo-torres-madrid/" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn logo" style="width:65px; height:65px; vertical-align:middle; margin-right:8px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn logo" style="width:65px; height:65px; vertical-align:middle;">
       </a>
       <a href="https://github.com/Ricard0ugh" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo" style="width:65px; height:65px; vertical-align:middle;">
@@ -64,5 +76,15 @@
     </div>
     <!-- You can add more contact details here -->
   </section>
+
+  <!-- Back to Top link -->
+  <div class="back-to-top">
+    <a href="#hero">Back to Top ↑</a>
+  </div>
+
+  <!-- Simple footer at the bottom -->
+  <footer>
+    &copy; 2025 Ricardo Torres Madrid
+  </footer>
 </body>
 </html>

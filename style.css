@@ -11,7 +11,7 @@ body {
 /* Style for each section */
 section {
   background-color: #fff; /* white background for sections */
-  margin: 20px auto; /* space around sections */
+  margin: 32px auto; /* more space between sections */
   padding: 20px; /* space inside sections */
   max-width: 600px; /* limit section width */
   border-radius: 8px; /* rounded corners */
@@ -25,8 +25,8 @@ section {
 }
 
 /* Section headings */
-h2 {
-  
+h1, h2 {
+  font-family: 'Poppins', Arial, sans-serif; /* fun Google font for headings */
   text-align: center;
   color: #333; /* dark gray color */
 }
@@ -40,6 +40,7 @@ h2 {
 /* Contact info */
 .contact-info p {
   margin: 8px 0;
+  text-align: center; /* center the contact paragraph */
 }
 
 /* Center the contact logos under Contact Info */
@@ -52,6 +53,15 @@ h2 {
 .contact-logos img:hover {
   transform: scale(1.15); /* slightly larger on hover */
   transition: transform 0.2s ease;
+}
+
+/* Add more space between the LinkedIn and GitHub logos */
+.contact-logos a {
+  margin-right: 24px; /* space to the right of each logo */
+}
+
+.contact-logos a:last-child {
+  margin-right: 0; /* no extra space after the last logo */
 }
 
 /* Skills section: display skills in a row and center them */
@@ -71,7 +81,8 @@ h2 {
 }
 
 /* Make skill logos greyed out and a bit larger */
-.skill-logo {
+.skill-logo,
+.contact-logos img {
   filter: grayscale(100%);
   opacity: 0.7;
   width: 65px;   /* increased from 28px */
@@ -79,6 +90,9 @@ h2 {
   margin-bottom: 16px; /* increased space between image and text */
   /* Add a smooth transition for the hover effect */
   transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(116,185,255,0.15); /* soft blue shadow */
+  border: 2px solid #e0f7fa; /* light blue border */
+  background: #fff;
 }
 
 /* When you hover over a skill item (logo or name), both zoom/bounce */
@@ -90,4 +104,55 @@ h2 {
 .skill-item div:hover {
   transform: scale(1.15); /* slightly larger on hover */
   transition: transform 0.2s ease;
+}
+
+/* Simple footer styling */
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 15px;
+  margin: 32px 0 8px 0;
+}
+
+/* Simple navigation bar styles */
+.navbar {
+  background-color: #e0f7fa; /* light blue */
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #74B9FF;
+  margin-bottom: 16px;
+}
+.navbar a {
+  color: #2D3436;
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 18px;
+  font-family: 'Poppins', Arial, sans-serif;
+  transition: color 0.2s;
+}
+.navbar a:hover {
+  color: #FF6B6B; /* coral on hover */
+}
+
+/* Fun quote style in hero */
+.quote {
+  font-style: italic;
+  color: #74B9FF;
+  margin-top: 10px;
+}
+
+/* Back to Top link style */
+.back-to-top {
+  text-align: center;
+  margin: 24px 0 0 0;
+}
+.back-to-top a {
+  color: #74B9FF;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Poppins', Arial, sans-serif;
+  transition: color 0.2s;
+}
+.back-to-top a:hover {
+  color: #FF6B6B;
 }
