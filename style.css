@@ -10,12 +10,20 @@ body {
 
 /* Style for each section */
 section {
-  background-color: #fff; /* white background for sections */
-  margin: 32px auto; /* more space between sections */
-  padding: 20px; /* space inside sections */
-  max-width: 600px; /* limit section width */
-  border-radius: 8px; /* rounded corners */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* subtle shadow */
+  background-color: #FDF6E3; /* cream color for text boxes */
+  margin: 32px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 16px;
+  border: 1px solid rgba(44, 44, 44, 0.13); /* feint black border */
+  /* Add a soft shadow for a "floating card" effect */
+  box-shadow: 0 4px 16px rgba(44,44,44,0.10), 0 1.5px 6px rgba(45,52,54,0.07);
+}
+
+/* About and Contact sections: use pale yellow for contrast */
+.about-me,
+.contact-info {
+  background-color: #FDF6E3; /* match all cards to cream */
 }
 
 /* Hero section: make it stand out */
@@ -80,19 +88,18 @@ h1, h2 {
   font-size: 20px; /* increased from 16px */
 }
 
-/* Make skill logos greyed out and a bit larger */
+/* Blend skill and contact logos with their card background using opacity */
 .skill-logo,
 .contact-logos img {
-  filter: grayscale(100%);
-  opacity: 0.7;
-  width: 65px;   /* increased from 28px */
-  height: 65px;  /* increased from 28px */
-  margin-bottom: 16px; /* increased space between image and text */
-  /* Add a smooth transition for the hover effect */
+  opacity: 0.45; /* makes the logos softly blend with the cream background */
+  width: 65px;
+  height: 65px;
+  margin-bottom: 16px;
   transition: transform 0.2s ease;
-  box-shadow: 0 2px 8px rgba(116,185,255,0.15); /* soft blue shadow */
-  border: 2px solid #e0f7fa; /* light blue border */
-  background: #fff;
+  box-shadow: 0 2px 8px rgba(116,185,255,0.10);
+  /* Remove border and background so there is no box around the logo */
+  border: none;
+  background: none;
 }
 
 /* When you hover over a skill item (logo or name), both zoom/bounce */
@@ -109,9 +116,20 @@ h1, h2 {
 /* Simple footer styling */
 footer {
   text-align: center;
-  color: #888;
+  font-family: 'Poppins', Arial, sans-serif; /* match headings font */
+  color: #333; /* match section heading color */
   font-size: 15px;
   margin: 32px 0 8px 0;
+  background-color: #e0f7fa; /* match hero/nav background */
+  padding: 16px 0;
+  border-radius: 16px;
+  /* Remove max-width and centering so it stretches full width */
+  /* max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; */
+  box-shadow: 0 2px 8px rgba(116,185,255,0.10);
+  border-top: 2px solid #74B9FF; /* blue top border */
+  margin-top: 16px;
 }
 
 /* Simple navigation bar styles */
@@ -155,4 +173,27 @@ footer {
 }
 .back-to-top a:hover {
   color: #FF6B6B;
+}
+
+/* Togepi triangle pattern for backgrounds */
+.with-pattern {
+  position: relative;
+  isolation: isolate;
+  /* Add a repeating SVG triangle pattern as the background */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'><rect width='180' height='180' fill='%23FDF6E3'/><polygon points='20,20 55,20 37.5,50' fill='%2374B9FF' fill-opacity='0.22'/><polygon points='110,30 145,30 127.5,60' fill='%23FF6B6B' fill-opacity='0.18'/><polygon points='60,100 95,100 77.5,130' fill='%2374B9FF' fill-opacity='0.16'/><polygon points='15,140 50,140 32.5,170' fill='%23FF6B6B' fill-opacity='0.16'/><polygon points='120,120 155,120 137.5,150' fill='%2374B9FF' fill-opacity='0.18'/></svg>");
+  background-size: 180px 180px;
+  background-repeat: repeat;
+}
+
+/* Optional overlay to soften the pattern */
+.with-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.55); /* soft white overlay */
+  z-index: -1;
+}
+}
+}
+}
 }
