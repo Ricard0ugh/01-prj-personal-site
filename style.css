@@ -193,7 +193,34 @@ footer {
   background: rgba(255,255,255,0.55); /* soft white overlay */
   z-index: -1;
 }
+
+/* Project inner box style for Projects section */
+.project-box {
+  background-color: #e0f7fa; /* match the blue used in other boxes */
+  color: #222; /* dark text for readability */
+   /* fun, readable font */
+  border: 1px solid rgba(44, 44, 44, 0.13); /* feint black border to match other boxes */
+  border-radius: 12px; /* slightly rounded corners */
+  box-shadow: 0 2px 8px rgba(44,44,44,0.07);
+  padding: 16px;
+  margin: 24px 0 0 0; /* space above the box */
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.2s ease; /* smooth zoom effect */
 }
+
+/* Make the paragraph text inside the project box simple black text */
+.project-box p {
+  color: #222; /* simple black text */
+  font-weight: normal; /* not bold */
 }
+
+/* Bounce/zoom effect for project box on hover */
+.project-box:hover {
+  transform: scale(1.05); /* slightly larger on hover */
 }
+
+.project-box h3 {
+  text-align: center; /* center the Portfolio Website heading */
 }
